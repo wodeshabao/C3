@@ -22,7 +22,7 @@ int main()
         printf("5---退出\n");
 
         printf("请选择相应功能\n");
-        char code;
+        int code;
         scanf("%d", &code);
 
         if (code == 1)
@@ -45,6 +45,17 @@ int main()
         }
         if (code == 3)
         {
+            printf("所有车辆位置如下：\n");
+            
+            for(int i = 0; i < index; i++)
+            {
+                printf("第%d辆车的位置是(%d,%d)\n",i+1,arr[i].x ,arr[i].y);
+            }
+            printf("点击回车继续\n");
+            char xx;
+            scanf("%c", &xx);
+            scanf("%c", &xx);
+            
         }
         if (code == 4)
         {
