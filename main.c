@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <math.h>
 struct lxd
 {
     int x;
@@ -46,19 +46,45 @@ int main()
         if (code == 3)
         {
             printf("所有车辆位置如下：\n");
-            
-            for(int i = 0; i < index; i++)
+
+            for (int i = 0; i < index; i++)
             {
-                printf("第%d辆车的位置是(%d,%d)\n",i+1,arr[i].x ,arr[i].y);
+                printf("第%d辆车的位置是(%d,%d)\n", i + 1, arr[i].x, arr[i].y);
             }
             printf("点击回车继续\n");
             char xx;
             scanf("%c", &xx);
             scanf("%c", &xx);
-            
         }
         if (code == 4)
         {
+            printf("请输入您的当前位置：\n");
+            int x;
+            int y;
+            scanf("%d", &x);
+            scanf("%d", &x);
+
+            double min = 100000;
+            int carID = 0;
+
+            for (int i = 0; i < index; i++)
+            {
+                int dx = x - arr[index].x;
+                int dy = y - arr[index].y;
+                double l = sqrt(dx * dx + dy * dy);
+                
+                if (min > l)
+                {
+                    min = l;
+                    carID = i;
+                }
+            }
+
+            printf("用户当前位置语第%d辆车的距离为：%lf，是最小距离\n", carID + 1, min);
+            printf("\n点击回车继续\n");
+            char xx;
+            scanf("%c", &xx);
+            scanf("%c", &xx);
         }
         if (code == 5)
         {
