@@ -42,6 +42,22 @@ int main()
         }
         if (code == 2)
         {
+
+            if (index > 0)
+            {
+                index--;
+                printf("删除成功，点击回车继续\n");
+                char xx;
+                scanf("%c", &xx);
+                scanf("%c", &xx);
+            }
+            else
+            {
+                printf("删除失败，点击回车继续\n");
+                char xx;
+                scanf("%c", &xx);
+                scanf("%c", &xx);
+            }
         }
         if (code == 3)
         {
@@ -72,7 +88,7 @@ int main()
                 int dx = x - arr[index].x;
                 int dy = y - arr[index].y;
                 double l = sqrt(dx * dx + dy * dy);
-                
+
                 if (min > l)
                 {
                     min = l;
